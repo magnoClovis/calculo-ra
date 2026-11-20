@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>✨ ¡Calcula tu RA! ✨</title>
+<meta name="description" content="Calculadora de nota de RA para alumnos">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Comic+Neue:wght@400;700&family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/efectos.css">
+<link rel="stylesheet" href="css/componentes.css">
+<link rel="stylesheet" href="css/resultado.css">
+</head>
+<body>
+
+<div class="deco" aria-hidden="true">🦋</div>
+<div class="deco" aria-hidden="true">💿</div>
+<div class="deco" aria-hidden="true">⭐</div>
+<div class="deco" aria-hidden="true">💖</div>
+<div class="deco" aria-hidden="true">💾</div>
+<div class="deco" aria-hidden="true">🌈</div>
+<div class="deco" aria-hidden="true">🎀</div>
+<div class="deco" aria-hidden="true">🌸</div>
+<div class="deco" aria-hidden="true">📱</div>
+<div class="deco" aria-hidden="true">💫</div>
+<div class="deco" aria-hidden="true">🍒</div>
+<div class="deco" aria-hidden="true">👾</div>
+
+<main class="pagina">
+
+  <div class="titulo-caja">
+    <h1 id="titulo" aria-label="¡Calcula tu RA!">¡Calcula tu RA!</h1>
+  </div>
+  <p class="subtitulo">✨ La nota de tu Resultado de Aprendizaje ✨</p>
+
+  <div class="cinta" aria-hidden="true">
+    <p><span class="estrella"></span> BIENVENID@ <span class="estrella"></span> RELLENA LOS HUECOS <span class="estrella"></span> MIRA TU NOTA <span class="estrella"></span> SIN REGISTRO <span class="estrella"></span> SIN DATOS <span class="estrella"></span> TODO SE CALCULA EN TU NAVEGADOR <span class="estrella"></span></p>
+  </div>
+
+  <section class="ventana" aria-labelledby="t-datos">
+    <div class="barra"><span id="t-datos">📝 Tus trabajos del RA</span><span class="btns" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+    <div class="cuerpo">
+      <div class="cuantos">
+        <div>
+          <label for="num">¿Cuántos trabajos tiene este RA?</label>
+          <div class="stepper">
+            <button type="button" class="menos" id="menos" aria-label="Un trabajo menos">−</button>
+            <input type="number" id="num" min="1" max="15" value="3" inputmode="numeric">
+            <button type="button" class="mas" id="mas" aria-label="Un trabajo más">+</button>
+          </div>
+        </div>
+        <button type="button" class="suave" id="repartir">⚖️ Repartir pesos por igual</button>
+      </div>
+
+      <div id="filas"></div>
+
+      <ul class="avisos" id="avisos" aria-live="polite"></ul>
+
+      <div class="acciones">
+        <button type="button" class="suave" id="limpiar">🧹 Empezar de nuevo</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="ventana" aria-labelledby="t-res">
+    <div class="barra"><span id="t-res">🏆 Resultado</span><span class="btns" aria-hidden="true"><i>_</i><i>□</i><i>x</i></span></div>
+    <div class="cuerpo resultado" aria-live="polite">
+      <p class="etiqueta-res" id="etq">TU NOTA DEL RA</p>
+      <div class="nota quieta" id="nota">¡Rellena los huecos!</div>
+      <div class="carga" aria-hidden="true"><div id="carga"></div></div>
+      <p class="mensaje" id="mensaje">Aquí aparecerá la magia ✨</p>
+      <ul class="detalles" id="detalles"></ul>
+    </div>
+  </section>
+
+  <p class="pie">
+    Hecho para evitar el clásico "profe, ¿cuánto llevo?" 🙋 El resultado es orientativo y la nota oficial es siempre la de la plataforma. Para cualquier duda contacta con el profe.
+    <small>MEJOR VISTO CON INTERNET EXPLORER 6</small>
+  </p>
+</main>
+
+<script src="js/formato.js"></script>
+<script src="js/calculo.js"></script>
+<script src="js/validacion.js"></script>
+<script src="js/estado.js"></script>
+<script src="js/mensajes.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/efectos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "calculadora-ra",
+  "private": true,
+  "scripts": { "test": "node --test" }
+}

@@ -1,0 +1,38 @@
+:root {
+  --azul: #1b5fd6;
+  --azul-osc: #0a3a9c;
+  --verde: #3fae29;
+  --rosa: #ff4fc3;
+  --lila: #9b5cff;
+  --amarillo: #ffe14a;
+  --beige: #ece9d8;
+  --fuente-titulo: "Bowlby One", "Arial Black", Impact, sans-serif;
+  --fuente-cuerpo: "Comic Neue", "Comic Sans MS", "Trebuchet MS", sans-serif;
+  --fuente-cursiva: "Pacifico", "Brush Script MT", cursive;
+  --fuente-pixel: "Press Start 2P", "Courier New", monospace;
+}
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  color: #1d1d4a;
+  background: #4a8ff0;
+  overflow-x: hidden;
+}
+
+/* el fondo va en un pseudo-elemento fijo porque background-attachment: fixed falla en iOS */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("../img/fondo-xp.jpg") center 70% / cover no-repeat;
+}
+
+.pagina { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; padding: 18px 14px 40px; }
+
+.pie { text-align: center; font-size: .95rem; color: #0b2a6b; background: rgba(255,255,255,.75); border: 2px ridge #fff; border-radius: 8px; padding: 10px; }
+.pie small { display: block; margin-top: 4px; font-family: var(--fuente-pixel); font-size: .55rem; line-height: 1.8; }
